@@ -2416,21 +2416,14 @@
 
       side1.style.display = "none";
       side2.style.display = "none";
-      console.log("side1", side1);
       parentDropdown.addEventListener("mouseenter", () => {
-        console.log("Entered");
         side1.style.display = "flex";
       });
 
       side1.addEventListener("mouseleave", () => {
-        console.log("leave");
-
-        // side1.style.display = "none";
-        // side2.style.display = "none";
       });
 
       side1.addEventListener("mouseenter", () => {
-        console.log("mouse entered");
         side2.style.display = "flex";
       });
 
@@ -2439,7 +2432,6 @@
         side1.style.display = "none";
       });
       side1.addEventListener("mouseleave", () => {
-        // side2.style.display = "none";
       });
     </script>
 
