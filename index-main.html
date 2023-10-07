@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="asset/footer-images/Customer-care/happy-shopping-img.png" />
+
+    <title>Daraz Clone by Asad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            /* background-color: rgb(233, 220, 220); */
+            background-color: #F5F5F5;
+            font-family: "Boroto regular, Belanosima", sans-serif;
+        }
+
+
+
+        /* navbar and prenavber styling */
+        .fa-shopping-cart {
+            color: black;
+            font-size: 40px;
+            cursor: pointer;
+
+        }
+
+        .pre-navbar {
+            font-size: 12px;
+            background-color: white;
+            /* border: 1px solid; */
+            padding: 2px;
+        }
+
+        .pre-navbar span {
+            padding: 0px 17px;
+            cursor: pointer;
+        }
+
+        .pre-navbar span:hover {
+            text-decoration: underline;
+            color: #f57224;
+        }
+
+        .navi {
+            background-color: white;
+            /* width: 1375px; */
+        }
+
+        /* small {
+      line-height: 0.5;
+    } */
+
+        .remaining {
+            width: 80%;
+            /* width: 90%; */
+            /* border: 1px solid; */
+        }
+
+        .search-form {
+            width: 680px;
+        }
+
+        .input {
+            width: 90%;
+
+            background-color: #f5f5f5;
+            outline: none;
+            border: none;
+            padding-left: 10px;
+            box-sizing: border-box;
+
+        }
+
+        .input:focus {
+            text-decoration: none;
+            border: none;
+            outline: none;
+        }
+
+        .search-button {
+            width: 45px;
+            height: 45px;
+            border: none;
+            background-color: #f57224;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            justify-content: center;
+        }
+
+        .fa-search {
+            background-color: #f57224;
+            color: white;
+            font-size: 20px;
+        }
+
+        .download-now {
+            width: 188px;
+            height: 45px;
+        }
+
+        .navbar-logo {
+            display: inline-block;
+
+            width: 135px;
+            height: 41px;
+        }
+
+        .navbar-content-right {
+            width: auto;
+        }
+
+        /*  */
+        /* carousel styling  */
+        .carousel .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+        }
+
+        .dropdown-lists {
+            z-index: 10;
+            left: 8%;
+            height: 344px;
+            width: 200px;
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            padding-top: 3px;
+        }
+
+        .dropdown-lists span {
+            display: block;
+            padding-left: 10px;
+            color: #757575;
+            font-size: 13px;
+            justify-content: start;
+            height: 100%;
+        }
+
+        .dropdown-lists span:hover .nested-dropdown-list {
+            display: block;
+        }
+
+        .nested-dropdown-list {
+            z-index: 10;
+            left: calc(8% + 200px);
+            height: 344px;
+            width: 200px;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 3px;
+            background-color: white;
+            box-shadow: #e7e2e2;
+        }
+
+        .nested-dropdown-list span {
+            display: block;
+            padding-left: 10px;
+            color: #757575;
+            font-size: 13px;
+            justify-content: start;
+            height: 100%;
+        }
+
+        .nested-dropdown-list span:hover {
+            background-color: lightgray;
+        }
+
+        .dropdown-lists span:hover {
+            background-color: lightgray;
+        }
+
+        .navbar-sign {
+            font-size: 15px;
+            margin: 0 5px;
+        }
+
+        /* Dropdown listing */
+        .carousel .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+        }
+
+        .dropdown-lists {
+            z-index: 10;
+            left: 8%;
+            height: 344px;
+            width: 200px;
+            padding: 0px;
+            margin: 0px;
+            /* border: 1px solid red; */
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            padding-top: 3px;
+        }
+
+        .dropdown-lists span {
+            display: block;
+            padding-left: 10px;
+            color: #757575;
+            font-size: 13px;
+            justify-content: start;
+            height: 100%;
+        }
+
+        .dropdown-lists span:hover .navbar-sign {
+            display: block;
+        }
+
+        .nested-dropdown-list {
+            z-index: 10;
+            left: 21.5%;
+            height: 344px;
+            width: 200px;
+            padding: 0px;
+            margin: 0px;
+            /* border: 1px solid red; */
+            /* display: flex; */
+            flex-direction: column;
+            padding-top: 3px;
+            background-color: white;
+            box-shadow: #e7e2e2;
+            display: flex;
+        }
+
+        .second-nested-dropdown-list {
+            /* z-index: 10; */
+            left: calc(21.5% + 200px);
+            height: 344px;
+            width: 200px;
+            padding: 0px;
+            margin: 0px;
+            flex-direction: column;
+            padding-top: 3px;
+            background-color: white;
+            box-shadow: #e7e2e2;
+            z-index: 10;
+            position: absolute;
+            top: 0
+                /* display: flex; */
+        }
+
+        .second-nested-dropdown-list span {
+            display: block;
+            padding-left: 10px;
+            color: #757575;
+            font-size: 13px;
+            justify-content: start;
+            height: 100%;
+        }
+
+        .nested-dropdown-list span {
+            display: block;
+            padding-left: 10px;
+            color: #757575;
+            font-size: 13px;
+            justify-content: start;
+            height: 100%;
+        }
+
+        .nested-dropdown-list span:hover {
+            background-color: lightgray;
+        }
+
+        .nested-dropdown-list span:hover .navbar-sign {
+            display: block;
+        }
+
+        .dropdown-lists span:hover {
+            background-color: lightgray;
+        }
+
+        .navbar-sign {
+            font-size: 15px;
+            margin: 0 5px;
+            display: none;
+        }
+
+        /* */
+
+
+
+
+        /* .form-width {
+      width: auto;
+      position: relative;
+    } */
+
+
+        /* ads space styling */
+        .ad-space {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            object-fit: contain;
+        }
+
+        .ad-space img {
+            object-fit: contain;
+            cursor: pointer;
+            border: 1px solid red;
+        }
+
+        /* trending-categories styling */
+        .trending-categorie {
+            /* display: flex; */
+            /* width: 100%; */
+            /* border-radius: 50px; */
+            /* background-color: white;
+      height: 35px;
+      align-items: center;
+      margin: 6px; */
+        }
+
+        .trending-categorie .mart {
+            width: 100%;
+            border: 1px solid;
+            border-radius: 50px;
+            padding: 4px;
+            background-color: white;
+            height: 40px;
+            align-items: center;
+            margin: 6px;
+        }
+
+        .trending-categorie .mart img {
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .tc-first:hover {
+            color: rgb(126, 211, 33);
+            cursor: pointer;
+        }
+
+        .tc-first:hover span {
+            display: block;
+        }
+
+        .tc-first span {
+            display: none;
+        }
+
+
+        .tc-second:hover span {
+            display: block;
+        }
+
+        .tc-second span {
+            display: none;
+        }
+
+        .tc-second:hover {
+            color: rgb(253, 209, 33);
+            cursor: pointer;
+        }
+
+        .tc-three-fourth {
+            cursor: pointer;
+        }
+
+        .tc-three-fourth span {
+            display: none;
+        }
+
+        .tc-three-fourth:hover span {
+            display: block;
+        }
+
+        .tc-box:hover {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        /* flash sales styling */
+
+        .flash-sale {
+            width: 1188px;
+            height: auto;
+            background-color: #ffffff
+        }
+
+        .flash-sale-wrapper {
+            margin-left: 9%;
+        }
+
+        .sale {
+            font-weight: 500;
+            font-size: 14px;
+            color: #f85606;
+            background-color: #ffffff;
+        }
+
+        .my-parent-card-header {
+            font-size: 12;
+            background-color: #ffffff;
+            width: 1188px;
+            height: 60px;
+            border-bottom: 1px solid #c4cacf;
+        }
+
+        .timer {
+            background-color: #ffffff;
+        }
+
+        .time {
+            color: #ff6801;
+            background-color: #ffffff;
+        }
+
+        .time .time-box {
+            border-radius: 2px;
+            font-weight: 500;
+            margin: 12px 6px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff6801;
+            text-align: center;
+            width: 40px;
+            height: 35px;
+            line-height: 35px;
+        }
+
+        .shop-more {
+            font-weight: 500;
+            font-size: 14px;
+            float: right;
+            border: 1px solid #f85606;
+            border-radius: 2px;
+            color: #f85606;
+            height: 35px;
+            background-color: transparent;
+            line-height: 35px;
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-right: 11px;
+            margin-top: 13px;
+        }
+
+        .my-parent-card-header .sale-time-left {
+            background-color: #ffffff;
+            height: 60px;
+            width: 35%;
+            border-bottom: 1px solid #c4cacf;
+            font-weight: 400;
+        }
+
+        .my-parent-card-body {
+            background-color: #ffffff;
+            width: 1188px;
+            padding: 10px 0px 10px;
+            /* padding: 0px !important; */
+            margin: 0px !important;
+        }
+
+        .card-body {
+            background-color: #ffffff;
+            font-size: 14px;
+            padding: 4px;
+            box-sizing: border-box;
+            height: 98px
+        }
+
+        .card-body del {
+            font-size: 12px;
+            background-color: #ffffff
+        }
+
+        .card-body span {
+            font-size: 12px;
+            background-color: #ffffff
+        }
+
+        .my-card {
+            width: 188px;
+            height: 286px
+        }
+
+        .my-card:hover {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+        }
+
+        .my-card img {
+            width: 188px;
+            height: 188px;
+            cursor: pointer;
+        }
+
+        .col-lg-2 {
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+
+        /* daraz-mall-shop styling */
+        .daraz-mall-shop-wrapper {
+            margin-left: 9%;
+        }
+
+        .daraz-mall-shop {
+            width: 1188px;
+            box-sizing: border-box;
+            object-fit: contain;
+        }
+
+        .daraz-mall-shop-cards:hover {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+
+        .daraz-mall-shop-wrapper .daraz-mall-shop-cards {
+            display: block;
+            border: none;
+            outline: none;
+            width: 188px;
+            height: 270px;
+            background-color: #fff;
+            overflow: hidden;
+            cursor: pointer;
+            margin-left: 13px;
+            /* border: none; */
+
+        }
+
+        .daraz-mall-shop-cards div {
+            width: 188px;
+            height: 280px
+        }
+
+        .card {
+            border-radius: 0;
+        }
+
+        .card div {}
+
+        .card:hover {
+            box-shadow: 0px 4px 5px gray, -5px 4px 7px gray, 5px 4px 7px gray;
+        }
+
+        .button {
+            font-family: 'Roboto-Medium';
+            margin: 0 auto;
+            display: block;
+            width: 387px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #f85606;
+            border: 1px solid #f85606;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        /* Side navbar lisr */
+        .jfyb {
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            border: 1px solid white;
+            overflow: auto;
+            padding-left: 40px;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+            cursor: pointer;
+            color: #f85608;
+            font-size: 12px;
+            background-color: #F5F5F5;
+
+        }
+
+        .jfyb:hover {
+            /* border: 1px solid red; */
+            width: 180px;
+            outline: none;
+            border: 1px solid white;
+            background-color: #F5F5F5;
+            /* transition: 0.5s ease-in-ou all; */
+        }
+
+        /* Chat-bot message */
+        .chat {
+            display: none;
+            height: 500px;
+            width: 750px;
+            background-color: white;
+            position: fixed;
+            bottom: 41px;
+            right: 5%;
+            z-index: 101;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+        }
+
+        .message-button {
+            position: fixed;
+            bottom: 0px;
+            right: 5%;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                0 10px 10px rgba(0, 0, 0, 0.22);
+            background-color: #f5f5f5;
+            width: 160px;
+            height: 40px;
+            color: #044254;
+            border: none;
+        }
+
+        .message-button:hover+.chat {
+            display: block;
+        }
+
+        /* Footer styling */
+
+        .font-size-12 {
+            font-size: 12px;
+            color: white;
+        }
+
+        .font-size-18 {
+            font-size: 18px;
+            color: white;
+        }
+
+        .font-size-14 {
+            font-size: 14px;
+        }
+
+        .font-size-10 {
+            font-size: 10px;
+            color: #888;
+        }
+
+        .anchor-heading {
+            font-size: 12px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .anchor {
+            font-size: 12px;
+            color: #888;
+            display: inline-block;
+            line-height: 16px;
+        }
+
+        /* remove inline styling */
+        .carousel-inner {
+            height: 344px;
+        }
+
+        .image-container {
+            width: 80%;
+            float: right;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto
+        }
+
+        .ads-space {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-left: 1%;
+            cursor: pointer;
+        }
+
+        .ad-space img {
+            width: 1170px;
+            height: 210px
+        }
+
+        .main-section {
+            margin-left: 6%;
+            justify-content: space-between;
+        }
+
+        .main-section .trending-categories .row {
+            width: 1200px;
+            margin-left: 2%;
+        }
+
+        .flash-sale-h2 {
+            font-size: 22px;
+            color: #757575;
+            margin-top: 24px;
+        }
+
+        .card-body .description {
+            height: 36px;
+            background-color: #ffffff;
+            overflow: auto;
+            line-height: 14px;
+        }
+
+        .card-body p {
+            height: 22px;
+            color: #f85606;
+            margin-bottom: 1px;
+            background-color: #ffffff;
+            font-size: 18px;
+        }
+
+        .daraz-mall-shop-header {
+            margin-top: 32px
+        }
+
+        .daraz-mall-shop-header h2 {
+            font-size: 22px;
+            color: #424242;
+        }
+
+        .daraz-mall-shop-header div a {
+            font-size: 14px;
+            color: #f85606;
+        }
+
+        .card-categorie {
+            width: 147.5px;
+            height: 147.5px;
+            font-size: 14px;
+            line-height: 2px
+        }
+
+        .footer-image {
+            width: 35px;
+            height: 35px;
+            border-radius: 50px;
+            cursor: pointer;
+
+        }
+
+        .payment-method-image {
+            width: 55px;
+            height: 40px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .verified-by-img{
+            width: 156px;height: 60px;mix-blend-mode: multiply;
+            cursor: pointer;
+        }
+
+        .main-footer .row a{
+text-decoration: none;
+        }
+
+
+        .footer-main a{
+            text-decoration: none;
+        }
+
+        /* this is me */
+    </style>
+</head>
+
+<body>
+    <div class="sticky-top bg-light">
+        <div class="container pe-5" style="min-width: 1200px;">
+            <!-- pre navbar -->
+            <div class="pre-navbar d-flex justify-content-end">
+                <span style="color: #f57224;">Save money on top</span>
+                <span>Daraz Affliate Program</span>
+                <span>SELL ON DARAZ</span>
+                <span>CUSTOMER CARE</span>
+                <span>TRACK MY ORDER</span>
+                <span>LOGIN</span>
+                <span>SIGNUP</span>
+                <span>زبان تبدیل کریں</span>
+            </div>
+        </div>
+        <!-- Navbar -->
+        <div class="navi bg-light sticky-top bg-light w-100">
+            <nav class="navbar d-flex justify-content-evenly container ps-5" style="min-width: 1200px;">
+                <div class="logo">
+                    <div class="navbar-brand">
+                        <img src="https://icms-image.slatic.net/images/ims-web/3ae67ef5-e5f6-42c3-9a40-993ef9a7bfae.png"
+                            alt="" class="navbar-logo" />
+                    </div>
+                </div>
+                <div class="remaining d-flex justify-content-evenly align-items-center">
+                    <form action="" class="d-flex search-form">
+                        <input type="text" class="input" placeholder="Search in Daraz" />
+                        <span class="search-button"><i class="fa fa-search"></i></span>
+                    </form>
+                    <span><img src="asset/add-to-cart.jpeg" alt="add to card" class="fa fa-shopping-cart" /></span>
+                    <img class="download-now" src="asset/download-now.png" alt="" />
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- poster carousel -->
+
+    <div class="position-relative" style="min-width: 1200px;">
+        <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="5"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="6"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="7"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="8"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="image-container">
+                        <img src="asset/posters/first.jpeg" alt="Los Angeles" class="d-block" />
+                    </div>
+                    <div class="color-indicator visibility-hidden" style="
+              background-color: #ffb6c1;
+              height: 344px;
+              transition: 1s ease-in;
+            "></div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="asset/posters/second-poster.jpeg" alt="Los Angeles" class="d-block" />
+                    </div>
+                    <div class="color-indicator visibility-hidden" style="
+              background-color: #ffa500;
+              height: 344px;
+              transition: 1s ease-in;
+            "></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="asset/posters/third-poster.jpeg" alt="Los Angeles" class="d-block" />
+                    </div>
+                    <div class="color-indicator visibility-hidden" style="
+              background-color: #fe5000;
+              height: 344px;
+              transition: 1s ease-in;
+            "></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="asset/posters/fourth-poster.jpeg" alt="Los Angeles" class="d-block" />
+                    </div>
+                    <div class="color-indicator visibility-hidden" style="
+              background-color: #bdb7b5;
+              height: 344px;
+              transition: 1s ease-in;
+            "></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="asset/posters/fifth-poster.jpeg" alt="Los Angeles" class="d-block" />
+                    </div>
+                    <div class="color-indicator visibility-hidden" style="
+              background-color: #bdb7b5;
+              height: 344px;
+              transition: 1s ease-in;
+            "></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="asset/posters/sixth-poster.jpeg" alt="Los Angeles" class="d-block" />
+                    </div>
+                    <div class="color-indicator visibility-hidden" style="
+              background-color: #433194;
+              height: 344px;
+              transition: 1s ease-in;
+            "></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="asset/posters/seventh-poster.jpeg" alt="Los Angeles" class="d-block" />
+                    </div>
+                    <div class="color-indicator visibility-hidden" style="
+              background-color: #c0badb;
+              height: 344px;
+              transition: 1s ease-in;
+            "></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="asset/posters/eighth-poster.jpeg" alt="Los Angeles" class="d-block" />
+                    </div>
+                    <div class="color-indicator visibility-hidden" style="
+              background-color: #d4d28a;
+              height: 344px;
+              transition: 1s ease-in;
+            "></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="image-container">
+                        <img src="asset/posters/ninth-poster.jpeg" alt="Los Angeles" class="d-block" />
+                    </div>
+                    <div class="color-indicator" style="
+              background-color: #fe5000;
+              height: 344px;
+              transition: 1s ease-in;
+            "></div>
+                </div>
+            </div>
+            <!-- Drop down list -->
+        </div>
+        <!-- parent dropdown -->
+        <div class="position-absolute top-0 bg-light dropdown-lists" id="side-0">
+            <span id="side-0" id="side-0" class="d-flex justify-content-between align-items-center pe-2">Groceries &
+                Pets
+                <span id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">Health & Beauty
+                <span id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">Health & Beauty
+                <span id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">Men's Fashion
+                <span id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">Women's Fashion
+                <span id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">Mother & Baby
+                <span id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">Home & Lifestyle
+                <span id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">Electronic Devices
+                <span id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">Electronic Accessories<span
+                    id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">TV & Home Appliances<span
+                    id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">Sports & Outdoor<span
+                    id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">Watches, Bags &
+                Jewellery<span id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-0" class="d-flex justify-content-between align-items-center pe-2">Automotive & Motorbike<span
+                    id="side-0" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+        </div>
+        <!-- nested drop down -->
+        <div id="side-1" class="nested-dropdown-list" style="z-index: 10; position: absolute; top: 0">
+            <span class="d-flex justify-content-between align-items-center pe-2">Groceries & Pets
+                <span class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">Health & Beauty
+                <span class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">Health & Beauty
+                <span class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">Men's Fashion
+                <span class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">Women's Fashion
+                <span class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">Mother & Baby
+                <span class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">Home & Lifestyle
+                <span class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">Electronic Devices
+                <span class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">Electronic Accessories<span
+                    class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">TV & Home Appliances<span
+                    class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">Sports & Outdoor<span
+                    class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">Watches, Bags & Jewellery<span
+                    class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span class="d-flex justify-content-between align-items-center pe-2">Automotive & Motorbike<span
+                    class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+        </div>
+        <!-- nested nested dropdown list -->
+        <div id="side-2" class="second-nested-dropdown-list" style="z-index: 10; position: absolute; top: 0">
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Groceries & Pets
+                <span id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Health & Beauty
+                <span id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Health & Beauty
+                <span id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Men's Fashion
+                <span id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Women's Fashion
+                <span id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Mother & Baby
+                <span id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Home & Lifestyle
+                <span id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Electronic Devices
+                <span id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Electronic Accessories<span
+                    id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">TV & Home Appliances<span
+                    id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Sports & Outdoor<span
+                    id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Watches, Bags &
+                Jewellery<span id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+            <span id="side-2" class="d-flex justify-content-between align-items-center pe-2">Automotive & Motorbike<span
+                    id="side-2" class="d-flex align-items-center">
+                    <i class="fa fa-chevron-right navbar-sign"></i></span></span>
+        </div>
+    </div>
+
+    <!-- Ads Space -->
+    <!-- <section class="ad-space mt-5">
+      <span><img src="asset/ad-poster.png" alt="" /></span>
+    </section> -->
+    <div class="mt-4 mb-4 ads-space" style="min-width: 1200px;">
+        <img src="asset/cropped-poster-ads.gif" alt="" />
+    </div>
+    <!-- Main section -->
+    <section class="container main-section" style="min-width: 1200px;">
+        <!-- trending categories  -->
+        <div class="trending-categories justify-content-center mt-4 mb-3">
+            <div class="row">
+                <div class="col trending-categorie ">
+                    <!-- first -->
+                    <div class="d-flex justify-content-between border border-1 tc-box mart tc-first">
+                        <div>
+                            <img src="asset/trending-image-1.png" alt="logo image" class="rounded-circle me-1" />
+                            Mart
+                        </div>
+                        <span> <i class="fa fa-chevron-right "></i></span>
+                    </div>
+                </div>
+                <!-- second -->
+                <div class="col trending-categorie">
+                    <div class="d-flex justify-content-between border border-1 tc-box mart tc-second">
+                        <div>
+                            <img src="asset/trending-image-2.png" alt="logo image" class="rounded-circle me-1" />
+                            Fashion
+                        </div>
+                        <span> <i class="fa fa-chevron-right "></i></span>
+                    </div>
+                </div>
+                <!-- third -->
+                <div class="col trending-categorie">
+                    <div class="d-flex justify-content-between border border-1 tc-box mart tc-three-fourth">
+                        <div>
+                            <img src="asset/trending-image-3.png" alt="logo image" class="rounded-circle me-1" />
+                            Beauty
+                        </div>
+                        <span> <i class="fa fa-chevron-right "></i></span>
+                    </div>
+                </div>
+                <!-- fouth -->
+                <div class="col trending-categorie">
+                    <div class="d-flex justify-content-between border border-1 tc-box mart tc-three-fourth">
+                        <div>
+                            <img src="asset/trending-image-4.png" alt="logo image" class="rounded-circle me-1" />
+                           Home & Decor
+                        </div>
+                        <span> <i class="fa fa-chevron-right "></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- flash sale -->
+    <div class="container flash-sale-wrapper" style="min-width: 1200px;">
+        <h2 class="flash-sale-h2">Flash Sale</h2>
+        <section class="flash-sale justify-content-center">
+            <div class="my-parent-card bg-light">
+                <div class="my-parent-card-header d-flex justify-content-between">
+                    <div class="sale-time-left d-flex align-items-center justify-content-around">
+                        <div class="sale">On Sale Now</div>
+                        <div class="timer d-flex align-items-center">
+                            Ending in
+                            <div class="time d-flex align-items-center">
+                                <span class="time-box">10</span>:
+                                <span class="time-box">06</span> :<span class="time-box">06</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="shop-more d-flex align-items-center">
+                        Shop More
+                    </button>
+                </div>
+                <div class="my-parent-card-body row container d-flex justify-content-around">
+                    <!-- card 1 -->
+                    <div class="col-lg-2">
+                        <div class="my-card">
+                            <img class="card-img-top" src="asset/flash-sale/flash-sale-1.jpeg" alt="Card image" />
+                            <div class="card-body">
+                                <div class="description">
+                                    Some emple text some example text
+                                </div>
+
+                                <p>
+                                    RS:193
+                                </p>
+                                <del class="text-secondary">RS:1500</del>
+                                <span>-37%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="col-lg-2">
+                        <div class="my-card">
+                            <img class="card-img-top" src="asset/flash-sale/flash-sale-2.jpeg" alt="Card image" />
+                            <div class="card-body">
+                                <div class="description">
+                                    Some emple text some example text
+                                </div>
+
+                                <p>
+                                    RS:193
+                                </p>
+                                <del class="text-secondary">RS:1500</del>
+                                <span>-37%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- another card -->
+                    <!-- card 3 -->
+                    <div class="col-lg-2">
+                        <div class="my-card">
+                            <img class="card-img-top" src="asset/flash-sale/flash-sale-3.jpeg" alt="Card image" />
+                            <div class="card-body">
+                                <div class="description">
+                                    Some emple text some example text
+                                </div>
+
+                                <p>
+                                    RS:193
+                                </p>
+                                <del class="text-secondary">RS:1500</del>
+                                <span>-37%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="col-lg-2">
+                        <div class="my-card">
+                            <img class="card-img-top" src="asset/flash-sale/flash-sale-4.jpeg" alt="Card image" />
+                            <div class="card-body">
+                                <div class="description">
+                                    Some emple text some example text
+                                </div>
+
+                                <p>
+                                    RS:193
+                                </p>
+                                <del class="text-secondary">RS:1500</del>
+                                <span>-37%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 5 -->
+                    <div class="col-lg-2">
+                        <div class="my-card">
+                            <img class="card-img-top" src="asset/flash-sale/flash-sale-5.jpeg" alt="Card image" />
+
+                            <div class="card-body">
+                                <div class="description">
+                                    Some emple text some example text
+                                </div>
+
+                                <p>
+                                    RS:193
+                                </p>
+                                <del class="text-secondary">RS:1500</del>
+                                <span>-37%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 6 -->
+                    <div class="col-lg-2">
+                        <div class="my-card">
+                            <div class="position-relative">
+                                <img class="card-img-top" src="asset/flash-sale/flash-sale-6.jpeg" alt="Card image" />
+                                <div class="position-absolute top-0" style="
+                      background-color: #0000004d;
+                      height: 188px;
+                      width: 188px;
+                      color: #ffffff;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    ">
+                                    SOLD OUT
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="description">
+                                    Some emple text some example text
+                                </div>
+
+                                <p>
+                                    RS:193
+                                </p>
+                                <del class="text-secondary">RS:1500</del>
+                                <span>-37%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--  -->
+
+    <!-- DarazMallSHOP -->
+    <div class="daraz-mall-shop-wrapper container" style="min-width: 1200px;">
+
+        <section class="daraz-mall-shop">
+
+            <div class="daraz-mall-shop-header d-flex justify-content-between align-items-center">
+                <h2>DarazMall</h2>
+                <div>
+                    <a href="" class="text-decoration-none">SHOP MORE<i
+                            class="fa fa-chevron-right ms-2 "></i></span></a>
+                </div>
+            </div>
+            <!-- cards -->
+            <!-- card 1 -->
+            <div>
+                <div class="row d-flex ">
+                    <!-- card 1 -->
+                    <div class="col-lg-2">
+                        <div class="daraz-mall-shop-cards">
+                            <div class="card ">
+                                <!-- Image -->
+                                <img src="asset/categories/ct-poster/ct-photo-1.jpeg" alt="girl image" />
+                                <!-- Content -->
+                                <div class="d-flex flex-column align-items-center justify-content-center mt-4 pt-2"
+                                    style="font-size: 14px; padding-bottom: 2px;">
+                                    <span style="font-size: 14px;">SKIN-CARE</span>
+                                    <span style="font-size: 12px;" class="text-secondary">SKIN-CARE</span>
+                                </div>
+                                <!-- Logo -->
+                                <img src="asset/categories/ct-logos/ct-logo-1.jpeg" alt="girl image"
+                                    class="position-absolute"
+                                    style="width: 50px; top: 58%; left: 35%;box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="col-lg-2 daraz-mall-card">
+                        <div class="daraz-mall-shop-cards">
+                            <div class="card ">
+                                <!-- Image -->
+                                <img src="asset/categories/ct-poster/ct-photo-2.jpeg" alt="girl image"   />
+                                <!-- Content -->
+                                <div class="d-flex flex-column align-items-center justify-content-center  pt-6"
+                                    style="font-size: 14px; padding-bottom: 2px;  box-shadow: 0 -5px 5px -5px #333;">
+                                    <span style="font-size: 14px;">SKIN-CARE</span>
+                                    <span style="font-size: 12px;" class="text-secondary">SKIN-CARE</span>
+                                </div>
+                                <!-- Logo -->
+                                <img src="asset/categories/ct-logos/ct-logo-2.png" alt="girl image"
+                                    class="position-absolute"
+                                    style="width: 50px; top: 58%; left: 35%;box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="col-lg-2">
+                        <div class="daraz-mall-shop-cards">
+                            <div class="card">
+                                <!-- Image -->
+                                <img src="asset/categories/ct-poster/ct-photo-3.jpeg" alt="girl image"  />
+                                <!-- Content -->
+                                <div class="d-flex flex-column align-items-center justify-content-center pt-2 "
+                                    style="font-size: 14px; padding-bottom: 2px;box-shadow: 0 -5px 5px -5px #333;">
+                                    <span style="font-size: 14px;">SKIN-CARE</span>
+                                    <span style="font-size: 12px;" class="text-secondary">SKIN-CARE</span>
+                                </div>
+                                <!-- Logo -->
+                                <img src="asset/categories/ct-logos/ct-logo-3.png" alt="girl image"
+                                    class="position-absolute"
+                                    style="width: 50px; top: 58%; left: 35%;box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="col-lg-2">
+                        <div class="daraz-mall-shop-cards">
+                            <div class="card">
+                                <!-- Image -->
+                                <img src="asset/categories/ct-poster/ct-photo-4.jpeg" alt="girl image" />
+                                <!-- Content -->
+                                <div class="d-flex flex-column align-items-center justify-content-center pt-6"
+                                    style="font-size: 14px; padding-bottom: 2px;box-shadow: 0 -5px 5px -5px #333;">
+                                    <span style="font-size: 14px;">SKIN-CARE</span>
+                                    <span style="font-size: 12px;" class="text-secondary">SKIN-CARE</span>
+                                </div>
+                                <!-- Logo -->
+                                <img src="asset/categories/ct-logos/ct-logo-4.jpeg" alt="girl image"
+                                    class="position-absolute"
+                                    style="width: 50px; top: 58%; left: 35%;box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 5 -->
+                    <div class="col-lg-2">
+                        <div class="daraz-mall-shop-cards">
+                            <div class="card">
+                                <!-- Image -->
+                                <img src="asset/categories/ct-poster/ct-photo-5.jpeg" alt="girl image" />
+                                <!-- Content -->
+                                <div class="d-flex flex-column align-items-center justify-content-center pt-2"
+                                    style="font-size: 14px; padding-bottom: 2px;box-shadow: 0 -5px 5px -5px #333;">
+                                    <span style="font-size: 14px;">SKIN-CARE</span>
+                                    <span style="font-size: 12px;" class="text-secondary">SKIN-CARE</span>
+                                </div>
+                                <!-- Logo -->
+                                <img src="asset/categories/ct-logos/ct-logo-5.jpeg" alt="girl image"
+                                    class="position-absolute"
+                                    style="width: 50px; top: 58%; left: 35%;box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 6 -->
+                    <div class="col-lg-2">
+                        <div class="daraz-mall-shop-cards" style="background-color: #F5F5F5; width: 176px !important;">
+                            <div class="card">
+                                <!-- Image -->
+                                <img src="asset/categories/ct-poster/ct-photo-6.jpeg" alt="girl image" />
+                                <!-- Content -->
+                                <div class="d-flex flex-column align-items-center justify-content-center pt-6"
+                                    style="font-size: 14px; padding-bottom: 2px;box-shadow: 0 -5px 5px -5px #333;">
+                                    <span style="font-size: 14px;">SKIN-CARE</span>
+                                    <span style="font-size: 12px;" class="text-secondary">SKIN-CARE</span>
+                                </div>
+                                <!-- Logo -->
+                                <img src="asset/categories/ct-logos/ct-logo-6.jpeg" alt="girl image"
+                                    class="position-absolute"
+                                    style="width: 50px; top: 58%; left: 35%;box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card  7 -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--  -->
+
+
+    <!-- Categories -->
+    <div class="categories-wrapper " style="margin-left:9%;">
+        <section class="container">
+            <h2 style="font-size: 22px;color: #424242; margin-top: 32px;">Categories</h2>
+            <div class="d-flex categories justify-content-end" style="width: 1188px;">
+                <!-- card 1 -->
+                <div class="card card-categorie pt-1"
+                    style="width: 156px; height: 147.5px; font-size: 14px; line-height: 2px"
+                    class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-1.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content asf</p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-2.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">Noodles</p>
+                        <p class="justify-content-center d-flex"></p>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-3.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content asf sadf</p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-4.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content</p>
+                        <p class="justify-content-center d-flex">Buy it now</p>
+                    </div>
+                </div>
+                <!-- card 5 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-5.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content asf sadf</p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+                <!-- card 6 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-6.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content asf sadf</p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+                <!-- card 7 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-7.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content asf sadf</p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+                <!-- card 8 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-8.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content asf sadf</p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="d-flex categories justify-content-between" style="width: 1188px;">
+                <!-- card 1 -->
+                <div class="card pt-1" style="width: 156px; height: 147.5px; font-size: 14px; line-height: 2px"
+                    class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-9.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content asf</p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-10.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">Watch</p>
+                        <p class="justify-content-center d-flex">Best Ever</p>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-11.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content </p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-12.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">Rain Coat</p>
+                        <p class="justify-content-center d-flex">Water Proof</p>
+                    </div>
+                </div>
+                <!-- card 5 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-13.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content </p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+                <!-- card 6 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-14.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content </p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+                <!-- card 7 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-15.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content </p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+                <!-- card 8 -->
+                <div class="card card-categorie" class="d-flex w-100 justify-content-center align-items-center">
+                    <!-- image -->
+                    <div style="width: 100%; display: flex;justify-content: center;padding-top: 16px;">
+                        <img src="asset/categories/categories-original/ctg-16.jpeg" alt="img"
+                            style="width: 80px; height: 80px;float: center;margin-bottom: 10px;" />
+                    </div>
+                    <!-- content -->
+                    <div class="d-flex w-100 flex-column">
+                        <p class="d-flex justify-content-center">some content </p>
+                        <p class="justify-content-center d-flex">some more content</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Just for You -->
+    <div class="jfy-wrapper" style="margin-left: 2%;">
+        <section class="just-for-you container " style="width: 1188px;padding: 0px;">
+            <h2 style="font-size: 22px;color: #424242; margin-top: 32px;">Just For You</h2>
+            <div class="jfy  mb-5 d-flex justify-content-between ">
+                <!-- card 1 -->
+                <div class=" card d-flex position-relative " style="width: 189px; height: 325px">
+                    <img src="asset/just-for-u/jfy-1.webp" alt="img" />
+                    <div class="mt-3 d-flex flex-column h-50 m-2" style="font-size: 14px">
+                        <span class="align-items-center">some content here</span>
+                        red price here
+                        <span style="color: #ff5808">RS:140</span>
+                        <div class="d-flex flex-row" style="font-size: 12px">
+                            <del>RS:499</del>
+                            <span>-10%</span>
+                        </div>
+                        <div class="d-flex flex-row align-items-center bottom-0 position-absolute mb-2"
+                            style="font-size: 10px">
+                            <div>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span style="font-size: 12px">(130)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="card d-flex position-relative " style="width: 189px; height: 325px">
+                    <img src="asset/just-for-u/jfy-2.webp" alt="img" />
+                    <div class="mt-3 d-flex flex-column h-50 m-2" style="font-size: 14px">
+                        <span class="align-items-center">some content here</span>
+                        red price here
+                        <span style="color: #ff5808">RS:140</span>
+                        <div class="d-flex flex-row" style="font-size: 12px">
+                            <del>RS:499</del>
+                            <span>-10%</span>
+                        </div>
+                        <div class="d-flex flex-row align-items-center bottom-0 position-absolute mb-2"
+                            style="font-size: 10px">
+                            <div>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span style="font-size: 12px">(130)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="card d-flex position-relative " style="width: 189px; height: 325px">
+                    <img src="asset/just-for-u/jfy-3.webp" alt="img" />
+                    <div class="mt-3 d-flex flex-column h-50 m-2" style="font-size: 14px">
+                        <span class="align-items-center">some content here</span>
+                        red price here
+                        <span style="color: #ff5808">RS:140</span>
+                        <div class="d-flex flex-row" style="font-size: 12px">
+                            <del>RS:499</del>
+                            <span>-10%</span>
+                        </div>
+                        <div class="d-flex flex-row align-items-center bottom-0 position-absolute mb-2"
+                            style="font-size: 10px">
+                            <div>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span style="font-size: 12px">(130)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="card d-flex position-relative " style="width: 189px; height: 325px">
+                    <img src="asset/just-for-u/jfy-4.webp" alt="img" />
+                    <div class="mt-3 d-flex flex-column h-50 m-2" style="font-size: 14px">
+                        <span class="align-items-center">some content here</span>
+                        red price here
+                        <span style="color: #ff5808">RS:140</span>
+                        <div class="d-flex flex-row" style="font-size: 12px">
+                            <del>RS:499</del>
+                            <span>-10%</span>
+                        </div>
+                        <div class="d-flex flex-row align-items-center bottom-0 position-absolute mb-2"
+                            style="font-size: 10px">
+                            <div>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span style="font-size: 12px">(130)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 5 -->
+                <div class="card d-flex position-relative " style="width: 189px; height: 325px">
+                    <img src="asset/just-for-u/jfy-5.webp" alt="img" />
+                    <div class="mt-3 d-flex flex-column h-50 m-2" style="font-size: 14px">
+                        <span class="align-items-center">some content here</span>
+                        red price here
+                        <span style="color: #ff5808">RS:140</span>
+                        <div class="d-flex flex-row" style="font-size: 12px">
+                            <del>RS:499</del>
+                            <span>-10%</span>
+                        </div>
+                        <div class="d-flex flex-row align-items-center bottom-0 position-absolute mb-2"
+                            style="font-size: 10px">
+                            <div>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span style="font-size: 12px">(130)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 6 -->
+                <div class="card d-flex position-relative " style="width: 189px; height: 325px">
+                    <img src="asset/just-for-u/jfy-6.webp" alt="img" />
+                    <div class="mt-3 d-flex flex-column h-50 m-2" style="font-size: 14px">
+                        <span class="align-items-center">some content here</span>
+                        red price here
+                        <span style="color: #ff5808">RS:140</span>
+                        <div class="d-flex flex-row" style="font-size: 12px">
+                            <del>RS:499</del>
+                            <span>-10%</span>
+                        </div>
+                        <div class="d-flex flex-row align-items-center bottom-0 position-absolute mb-2"
+                            style="font-size: 10px">
+                            <div>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star checked" style="color: orange"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span style="font-size: 12px">(130)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--  -->
+
+
+    <!-- Load more button -->
+    <a href="" class="button mb-2 text-decoration-none fw-bold">Load more</a>
+
+    <!-- Side navbar -->
+    <div class="sidebar d-flex flex-column">
+        <div class="jfyb" style="top: 70%;">FlashSale</div>
+        <div class="jfyb" style="top:75.5%">DarazMall</div>
+        <div class="jfyb" style="top:81%">Categories</div>
+        <div class="jfyb" style="top:86.5%">Categories</div>
+    </div>
+
+    <!-- Footer of the page -->
+    <footer class="footer-main ">
+        <!-- Customer care -->
+        <div class="container-fluid" style="background-color: #2E2E54;padding-left: 120px;">
+            <div class="container ml-3 mr-3 footer p-3">
+                <div class="">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">
+                            <h4 class="font-size-18">Customer Care</h4>
+                            <div class="row">
+                                <div class="col-sm-10 col-lg-5 d-flex flex-column">
+                                    <a href="#" class="font-size-12">Help Center</a>
+                                    <a href="#" class="font-size-12">How to Buy Corporate & Bulk</a>
+                                    <a href="#" class="font-size-12">Purchasing Returns & Refunds Daraz</a>
+                                    <a href="#" class="font-size-12">Daraz Shop</a>
+                                    <a href="#" class="font-size-12">Shop</a>
+                                    <a href="#" class="font-size-12">Contact Us</a>
+                                    <a href="#" class="font-size-12">Purchase Protection</a>
+                                    <a href="#" class="font-size-12"> Daraz Pick up Points</a>
+                                    <div class="mt-5 d-flex flex-column">
+                                        <h4 class="font-size-18">Make Money With Us</h4>
+                                        <a href="#" class="font-size-12"> Daraz University</a>
+                                        <a href="#" class="font-size-12">Sell on Daraz</a>
+                                        <a href="#" class="font-size-12">Join Daraz Affiliate Program</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-lg-5 d-flex flex-column">
+                                    <h2 class="font-size-18">Daraz</h2>
+                                    <a href="" class="font-size-12">About Us</a>
+                                    <a href="" class="font-size-12">Digital Payments</a>
+                                    <a href="" class="font-size-12">Daraz Donates</a>
+                                    <a href="" class="font-size-12">Daraz Blog</a>
+                                    <a href="" class="font-size-12">Terms & Conditions</a>
+                                    <a href="" class="font-size-12">Privacy Policy</a>
+                                    <a href="" class="font-size-12">NTN Number : 4012118-6</a>
+                                    <a href="" class="font-size-12">STRN Number : 1700401211818</a>
+                                    <a href="" class="font-size-12">Online Shopping App</a>
+                                    <a href="" class="font-size-12">Online Grocery Shopping</a>
+                                    <a href="" class="font-size-12"> Daraz Exclusive</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <!-- barcode-image -->
+                            <div class="d-flex flex-row">
+                                <img src="asset/footer-images/Customer-care/bar-code-scan.png" alt=""
+                                    style="width: 100px;cursor: pointer;" class="border rounded" />
+                                <div class="d-flex flex-column justify-content-end ps-3 img-container">
+                                    <img src="asset/footer-images/Customer-care/happy-shopping-img.png" alt=""
+                                        style="width: 42px;cursor: pointer;" class="" />
+                                    <span class="text-light font-size-14" style="color: #f57224 !important">Happy
+                                        Shopping</span>
+                                    <span class="text-light font-size-14">Download </span>
+                                </div>
+                            </div>
+                            <!-- image with text, container -->
+                            <!-- row container of image -->
+                            <div class="row">
+                                <img src="https://freeiconshop.com/wp-content/uploads/edd/app-store-badge.png" alt=""
+                                    class="mt-0 mb-0" style="width: 120px;cursor: pointer;" />
+                                <img src="https://freeiconshop.com/wp-content/uploads/edd/google-play-badge.png" alt=""
+                                    class="mt-0 mb-0" style="width: 120px;cursor: pointer;" />
+                                <img src="https://freeiconshop.com/wp-content/uploads/edd/amazon-badge.png" alt=""
+                                    style="width: 120px;cursor: pointer;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Payment methods -->
+        <div class="container mt-3 mb-3">
+            <div class="row" style=" margin-left: 50px;">
+                <div class="col-sm-12 col-md-3">
+                    <div>
+                        <h2 class="font-size-18 text-dark">Payment Methods</h2>
+                        <div class="images">
+                            <img src="asset/footer-logos/visa.jpeg" alt="img" class="payment-method-image">
+                            <img src="asset/footer-logos/easypaisa.jpeg" alt="img" class="payment-method-image">
+
+                            <img src="asset/footer-logos/jazz-cash.jpeg" alt="img" class="payment-method-image">
+
+                            <img src="asset/footer-logos/union-pay.jpeg" alt="img" class="payment-method-image">
+
+                            <img src="asset/footer-logos/visa.jpeg" alt="img" class="payment-method-image">
+
+                            <img src="asset/footer-logos/master-card.jpeg" alt="img" class="payment-method-image mt-2">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div>
+                        <h2 class="font-size-18 text-dark">Daraz International</h2>
+                        <div class="images">
+                            <img src="asset/footer-logos/pakistan.jpeg" alt="img" class="footer-image">
+
+                            <img src="asset/footer-logos/bangladesh.jpeg" alt="img" class="footer-image">
+
+                            <img src="asset/footer-logos/srilanka.jpeg" alt="img" class="footer-image">
+
+                            <img src="asset/footer-logos/red-flag.jpeg" alt="img" class="footer-image">
+
+                            <img src="asset/footer-logos/visa.jpeg" alt="img" class="footer-image">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div>
+                        <h2 class="font-size-18 text-dark">Follow Us</h2>
+                        <div class="images">
+                            <img src="asset/footer-logos/facebook.jpeg" alt="img" class="footer-image">
+
+                            <img src="asset/footer-logos/twitter.jpeg" alt="img" class="footer-image">
+
+                            <img src="asset/footer-logos/insta.jpeg" alt="img" class="footer-image">
+
+                            <img src="asset/footer-logos/youtube.jpeg" alt="img" class="footer-image">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div>
+                        <h2 class="font-size-18 text-dark">Verified By</h2>
+                        <div class="images">
+                            <img src="asset/footer-logos/verified-by-img-2.jpg" alt="img" class="verified-by-img" >
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-left: 60px;">
+                <h2 class="font-size-18 text-dark mt-3 mb-3">© Daraz 2023</h2>
+            </div>
+        </div>
+        <!-- Main Footer -->
+        <div class="main-footer" style="background-color: #d3d3d3;padding-left: 50px; padding-right: 50px;box-sizing: border-box;">
+            <div class="container pt-4 pb-5">
+                <div class="row">
+                    <div class="col-sm-10 col-md-3">
+                        <h2 class="font-size-18 text-dark">
+                            How Daraz Transformed Online Shopping in Pakistan
+                        </h2>
+                        <p class="font-size-10 pt-3">
+                            Daraz first made waves in Pakistan’s e-commerce market after its
+                            introduction in 2012. We have since grown to become Pakistan’s
+                            largest platform for online shopping with a network spread
+                            across Asia in Pakistan, Bangladesh, Sri Lanka, Myanmar, and
+                            Daraz.com.np. Our vision was to provide a safe, efficient online
+                            marketplace platform for vendors and customers across the
+                            country to come together. We started off exclusively as an
+                            online fashion retail platform and over the years expanded to
+                            become a complete one-stop solution for all your buying needs.
+                            Daraz prides itself on not being just another ecommerce venture
+                            in Asia. We work tirelessly to make sure that we provide users
+                            with the best online online shopping experience and value for
+                            their purchases. Whether you shop online through our website or
+                            our online shopping mobile App, you can expect easy navigation,
+                            customized recommendations, and a smooth online shopping
+                            experience guaranteed.
+                        </p>
+                        <h2 class="font-size-18 text-dark">
+                            What Makes Us Different from Other Online Shopping Platforms?
+                        </h2>
+                        <p class="font-size-10 pt-3">
+                            Select from the Largest Online Marketplace in Pakistan With over
+                            15 million products to select from, Daraz offers its customers
+                            the most comprehensive listing of products in the country.
+                            Whether you’re looking for electronics, apparel, appliances, or
+                            groceries – there is something for everyone.
+                        </p>
+                        <b class="font-size-10 pt-3">Hassle Free Delivery </b>
+                        <p class="font-size-10">
+                            Online shopping is only as good as its execution and Daraz
+                            promises hassle free delivery right from the moment you order to
+                            when your package is dropped at your door. We cater to both
+                            major and smaller cities alike, and give you the choice to track
+                            your package as it makes its way to you so you always know your
+                            order status. If you are unsatisfied with any aspect of your
+                            order, we have a simple 7-day return or exchange policy.
+                        </p>
+                        <b class="font-size-10 pt-3">Payment Options to Suit Every Style
+                        </b>
+                        <p class="font-size-10">
+                            You can choose to pay through a credit/debit card, opt for cash
+                            on delivery or even go for EMI (easy monthly instalments). You
+                            can also avail exclusive offers by downloading Daraz Wallet – a
+                            closed loop digital wallet
+                        </p>
+                    </div>
+                    <div class="col-sm-10 col-md-3">
+                        <p class="font-size-10">
+                            that offers you a secure, easy way to make payments. We also
+                            have easypaisa & jazzcash payment method for our customers' ease
+                        </p>
+                        <b class="font-size-10 mt-3">Shop from Verified Vendors</b>
+                        <p class="b font-size-10">
+                            Daraz understands that online shopping in Pakistan comes with
+                            its fair share of risks. This is why with Daraz Marketplace and
+                            Daraz Mall customers have the security of choosing from verified
+                            vendors and brands from Karachi, Lahore, Islamabad and all
+                            across Pakistan. Now you’ll never have to second guess
+                            authenticity because Daraz makes sure to do it for you!
+                        </p>
+
+                        <b class="font-size-10 mt-3">Shop Around the World with Daraz Global Collection
+                        </b>
+                        <p class="font-size-10">
+                            International sellers and local convenience come together with
+                            Daraz Global collection. Get the chance to shop online from
+                            vendors around the world without leaving the Daraz website.
+                            Featuring thousands of novelty gadgets and accessories, Daraz
+                            Global Collection offers you a selection of products that you
+                            won’t find anywhere else when you’re online shopping in
+                            Pakistan.
+                        </p>
+                        <b class="font-size-10 mt-3">Avail Exclusive Discounts, Offers, and Promotions
+                        </b>
+                        <p class="font-size-10">
+                            Online shopping with Daraz means you get the chance to avail
+                            exclusive online-only promotional packages as well as discount
+                            vouchers from our vendors when you shop from their pages. Our
+                            flash sales give you customized product offers all curated with
+                            the help of our advanced AI technology so you always have deals
+                            you’ll actually be interested in!
+                        </p>
+                        <b class="font-size-10 mt-3">Buy Value, not Just Goods with Daraz Care
+                        </b>
+                        <p class="font-size-10">
+                            Daraz does not just cater online shopping in Pakistan but also
+                            aims to simplify the way you give back to society. With
+                            charities spanning across sectors of education, health care,
+                            environmental preservation, and shelters, you can choose to make
+                            a big difference with a few, simple clicks.
+                        </p>
+                        <b class="font-size-10 mt-3">Simplify Corporate Purchases </b>
+                        <p class="font-size-10">
+                            Who says corporate purchases need to be a complicated affair?
+                            When you opt for Daraz Corporate, you get an efficient and
+                            transparent solution for your business’ bulk purchasing needs.
+                            We’re proud to be working with some of the most prestigious
+                            organizations in Pakistan across a number of different
+                            industries.
+                        </p>
+                    </div>
+                    <div class="col-sm-10 col-md-3">
+                        <h2 class="font-size-18 text-dark">Top Categories & Brands</h2>
+                        <a href="" class="anchor-heading">MOBILE PHONES IN PAKISTAN</a>
+                        <br />
+                        <a href="" class="anchor">Apple iPhones, Honor Mobiles, Huawei Mobiles, Tecno Mobiles,
+                            Redmi Mobiles, Xiaomi Mi Mobiles, Nokia Mobiles, OnePlus
+                            Mobiles, Oppo Mobile Phones, Realme Mobiles, Samsung Mobile
+                            Phones, Vivo Mobile Phones, Mobile Accessories, Smart Watches</a><br />
+                        <a href="" class="anchor-heading">LATEST LAPTOPS</a><br />
+                        <a href="" class="anchor">Dell Laptops, HP Laptops, Lenovo Laptops, Mouse, Gaming Graphic
+                            Cards, lenovo ideapad 3, Macbook Pro 13, Hp Probook 650 G2</a><br />
+                        <a href="" class="anchor-heading">LED TV</a><br />
+                        <a href="" class="anchor">Changhong Led Tv, LG Led Tv, Samsung Led Tv, Sony Led Tv, TCL
+                            LED TVs</a><br />
+                        <a href="" class="anchor-heading">HOME APPLIANCES</a><br />
+                        <a href="" class="anchor">Microwave oven, Geyser, Heater, Refrigerators, Deep Freezers,
+                            Generators, Water Dispensers, Fans, Room Cooler, Table Fans,
+                            Wall Fans, Exhaust Fans, Pedestal Fans, Window Ac, Solar Panel,
+                            Washing Machine</a><br />
+                        <a href="" class="anchor-heading"> DSLR CAMERAS </a><br />
+                        <a href="" class="anchor">Camera Tripods, Drones, IP & CCTV Cameras, Nikon D7000, Nikon
+                            D5600, Canon 200D, Canon 1200D, Fujifilm Instax Mini 11, Canon
+                            M50 </a><br />
+                        <a href="" class="anchor-heading">HEALTH & BEAUTY</a>
+                        <a href="" class="anchor">sunisa foundation, Biofad, janssen facial kit, Glutathione
+                            Injection, Glutathione Cream Sauvage, Glutathione Tablets,
+                            Glutathione Soap, Infrared Thermometers, N95 Mask</a><br />
+                        <a href="" class="anchor-heading">TRENDING</a><br />
+                        <a href="" class="anchor">June Shopping Expo 2023, Azaadi Sale 2022, Shopping Expo, 11 11
+                            Sale, 12.12 Sale, Live Cricket Streaming, Online Bills, Core I5
+                            Laptop, Gtx 1060, Samsung A32, Samsung A51, Samsung A52, Samsung
+                            A71, Samsung A72, Samsung M31, Samsung S20, Samsung S20 Ultra
+                            5G, Samsung S21, Samsung S21 Ultra, Samsung Z Flip, Tecno Camon
+                            17, Tecno Spark 6, Vivo V20, Poco X3 Pro, Vivo V21, Vivo V21E,
+                            Vivo X70 Pro, Vivo Y12, Vivo Y12S, Vivo Y1S, Vivo Y20, Vivo Y51,
+                            Vivo Y51S, Oppo F19 Pro, Oppo Reno 6, Xiaomi Poco F3, Xiaomi
+                            Poco M3, Xiaomi Poco X3, Xiaomi Poco X3 Gt, Xiaomi Redmi 9C,
+                            Xiaomi Redmi Note 10 Pro, Sharp Aquos R2</a><br />
+                        <a href="" class="anchor-heading">SHOP WORLDWIDE WITH LAZADA</a><br />
+
+                        <a href="" class="anchor">Singapore, Malaysia, Philipines, Indonesia, Vietnam,
+                            Thailand</a><br />
+                        <a href="" style="font-size: 10px; color: #199cb7">See more links</a>
+                    </div>
+                    <div class="col-sm-10 col-md-3">
+                        <a href="" class="anchor-heading"> WOMEN'S FASHION </a><br />
+                        <a href="" class="anchor">
+                            Al-Karam Studio, Warda, Salitex, Bonanza Satrangi, Edenrobe,
+                            Firdous, Junaid Jamshed, Limelight, Sana Safinaz, Mahru, Pushup
+                            Bra, Women Undergarments </a><br />
+                        <a href="" class="anchor-heading"> MEN'S FASHION </a><br />
+                        <a href="" class="anchor"> Men's Shirts, Men's T-Shirts </a><br />
+                        <a href="" class="anchor-heading">ONLINE GROCERY STORE</a><br />
+                        <a href="" class="anchor">
+                            Oil & Ghee, Basmati Rice, Dried Fruits, Chocolates,
+                            Mattresses</a><br />
+                        <a href="" class="anchor-heading"> ONLINE BOOK STORE </a><br />
+                        <a href="" class="anchor">
+                            English Books, Islamic Books, History Books, English Literature
+                            Books, Kids Urdu Stories, Pride & Prejudice, Harry Potter Story
+                            Books, Namal Novel, Nimra Ahmed Novels </a><br />
+                        <a href="" class="anchor-heading"> USED CARS FOR SALE </a><br />
+                        <a href="" class="anchor">
+                            Suzuki Wagon R, KIA Sportage, Honda City, Toyota Prado, Suzuki
+                            Alto, Suzuki Cultus, Honda Civic, Honda 125, Honda 70, Yamaha
+                            Ybr 125, Hi Speed 150, Hi Speed Freedom 200, Metro 70, Super
+                            Power 125 <br />Monster JMS 3500 Electric Bike, Super Power 70,
+                            Car Accessories</a><br />
+                        <a href="" class="anchor-heading"> AIR CONDITIONERS </a><br />
+                        <a href="" class="anchor">
+                            Kenwood Ac, Haier Ac, Gree Ac, Dawlance Ac, Orient Ac, Ecostar
+                            Ac, Inverex Solar Ac, Pel Ac </a><br />
+                        <a href="" class="anchor-heading"> TOP MOBILE PHONES</a><br />
+                        <a href="" class="anchor">
+                            Nokia G20, redmi 9, realme 7 pro, realme c15, realme c21, vivo
+                            y20s, realme c11 Price in Pakistan, itel vision 1 pro price in
+                            pakistan, samsung galaxy a02 price in pakistan, Infinix Hot 10,
+                            Infinix Hot 8, Infinix Hot 9, Infinix Note 10 Pro, Infinix Note
+                            7, Infinix Note 8, Infinix Zero 8, Inifnix Smart 5, iPhone 11,
+                            iPhone 12, iphone 12 Pro Max, iPhone 12 Pro, iPhone 6, Itel A25,
+                            Mi 10T, Nokia 105, Oppo A15, Oppo A15S, Oppo A53, Oppo A54,
+                            Infinix Zero X Pro, Infinix Zero X Neo, Oppo F19, Oppo Reno 5,
+                            Oppo Reno 5 Pro, Xiaomi Poco M3 Pro, Realme 6 Pro, Realme 8,
+                            Realme Narzo 30A, Samsung A02S, Samsung A11, Samsung A12,
+                            Samsung A31, Vivo Y33s, Infinix Note 11, Tecno Spark 6 Go,
+                            Samsung A52s, Samsung Tab A7 Lite, Oppo Reno 6 Pro </a><br />
+                        <a href="" class="anchor-heading"> MEDICINE </a><br />
+                        <a href="" class="anchor">
+                            surbex z, tea tree oil, hydrozole cream, biotin tablets, evion
+                            capsule, lactogen 1, minoxidil, clobevate cream, centrum silver,
+                            maxdif cream, dermovate cream, cac 1000, Panadol Migraine </a><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Chat bot message -->
+    <button class="message-button"><i class="fa fa-envelope me-1 "></i> Messages</button>
+    <div class="chat">
+        <div class="row">
+            <div class="col">
+                <div class="heading d-flex justify-content-center align-items-center"
+                    style="height: 60px; background-color: gray;color: black;"> <i
+                        class="fa fa-envelope me-2"></i>Messages</div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center " style="height: 60px;">Login here</div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center border border-1"><a href="">Login First</a></div>
+    </div>
+
+</body>
+
+
+<script type="text/javascript">
+    let parentDropdown = document.getElementById("side-0");
+    let side1 = document.getElementById("side-1");
+    let side2 = document.getElementById("side-2");
+
+    side1.style.display = "none";
+    side2.style.display = "none";
+    console.log("side1", side1);
+    parentDropdown.addEventListener("mouseenter", () => {
+        console.log("Entered");
+        side1.style.display = "flex";
+    });
+
+    side1.addEventListener("mouseleave", () => {
+        console.log("leave");
+
+        // side1.style.display = "none";
+        // side2.style.display = "none";
+    });
+
+    side1.addEventListener("mouseenter", () => {
+        console.log("mouse entered");
+        side2.style.display = "flex";
+    });
+
+    side2.addEventListener("mouseleave", () => {
+        side2.style.display = "none";
+        side1.style.display = "none";
+    });
+    side1.addEventListener("mouseleave", () => {
+        // side2.style.display = "none";
+    });
+</script>
+
+
+</html>
